@@ -1,0 +1,47 @@
+.chat-icon {
+    position: fixed;
+    top: calc(100vh - 64px);
+    left: calc(100vw / 2 + 720px - 64px - 10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+
+    &__outline {
+        position: absolute;
+
+        width: 64px;
+        height: 64px;
+
+        border-radius: 50%;
+        background: $color-primary-jeans;
+        opacity: 0.32;
+
+        transition: all 0.2s ease-in;
+    }
+
+    &__bg {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+
+        border-radius: 50%;
+        background-color: $color-primary-jeans;
+
+        transition: all 0.2s ease-in;
+    }
+
+    svg {
+        z-index: 10;
+    }
+
+    &:hover &__outline {
+        background: $color-primary-orange;
+    }
+
+    &:hover &__bg {
+        background: $color-primary-orange;
+    }
+}

@@ -1,0 +1,32 @@
+.swiper-pagination {
+    bottom: 16px;
+
+    &-bullet {
+        background-color: #ffffff8f;
+    }
+
+    &-bullet-active {
+        position: relative;
+        top: 2px;
+        width: 12px;
+        height: 12px;
+        background-color: #fc620f;
+    }
+}
+
+.swiper-button {
+    &-next {
+        top: calc(100% - 16px);
+        right: 16px;
+        &::after {
+            display: none;
+        }
+    }
+    &-prev {
+        top: calc(100% - 16px);
+        left: 16px;
+        &::after {
+            display: none;
+        }
+    }
+}

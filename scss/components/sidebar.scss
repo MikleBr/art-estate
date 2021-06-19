@@ -1,0 +1,311 @@
+.filter-panel {
+    padding: 24px;
+
+    width: 282px;
+    height: 1740px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: $color-primary-jeans;
+    border-radius: 24px;
+
+    //common for filter panel
+
+    &__title {
+        margin: 0 0 12px 0;
+        
+        p {
+            @include typography($font-text, 16px, 400);
+
+            color: $color-secondary-white-1;
+        }
+    }
+
+    &__divider {
+        margin: 24px 0;
+
+        width: 100%;
+        height: 1px;
+        background-color: $color-secondary-white-2;
+    }
+
+    &__reset-btn {
+        width: 100%;
+
+        button {
+            width: 100%;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 2px solid $color-secondary-white-2;
+            box-sizing: border-box;
+            border-radius: 32px;
+
+            background-color: #ffffff00;
+            color: $color-primary-white;
+
+            @include typography($font-text, 14px, 400);
+
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: $color-secondary-white-2;
+            }
+        }
+    }
+}
+
+.view-params {
+    &__btns-block {
+        margin: 12px 0 0 0;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        margin: 0 8px 0 0;
+        padding: 4px 16px 4px 12px;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 24px;
+
+        cursor: pointer;
+
+        @extend %checkbox-label;
+
+        p {
+            margin: 0 0 0 8px;
+            @include typography($font-text, 16px, 400);
+        }
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-icon {
+            transition: all 0.2s ease-in;
+
+            path {
+                fill: $color-primary-white;
+            }
+        }
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked + .view-params__label {
+            @extend %checkbox-label-active;
+
+            .view-params__label-icon {
+                path {
+                    fill: $color-primary-jeans;
+                }
+            }
+        }
+    }
+}
+
+.price-params {
+    width: 100%;
+
+    &__btns-block {
+        margin: 12px 0 24px 0;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked + .price-params__label {
+            @extend %checkbox-label-active;
+        }
+    }
+
+    &__label {
+        margin: 0 8px 0 0;
+
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        @extend %checkbox-label;
+
+        p {
+            @include typography($font-text, 18px, 600);
+        }
+    }
+}
+
+.checkbox-params {
+    width: 100%;
+
+    &__btns-block {
+        margin: 24px 0 0 0;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__element {
+        margin: 0 0 24px 0;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .checkbox-params__label svg path {
+            opacity: 1;
+            fill: $color-primary-white;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        p {
+            @include typography($font-text, 16px, 400);
+            color: $color-primary-white;
+        }
+
+        & svg path {
+            opacity: 0;
+
+            fill: #ffffff00;
+
+            transition: all 0.12s ease-in-out;
+        }
+    }
+
+    &__icon {
+        margin: 0 16px 0 0;
+
+        width: 24px;
+        height: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+    }
+
+    &__icon-border {
+        width: 18px;
+        height: 18px;
+
+        position: absolute;
+
+        box-sizing: border-box;
+        border: 2px solid $color-secondary-white-2;
+        border-radius: 3px;
+    }
+
+    &__count {
+        width: 31px;
+        height: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $color-secondary-white-2;
+        border-radius: 4px;
+
+        text-align: center;
+        @include typography($font-text, 12px, 400);
+        color: $color-primary-white;
+    }
+
+    &__more {
+        margin: 28px 0 0 0;
+
+        a {
+            @include typography($font-text, 16px, 600);
+            color: $color-primary-orange;
+        }
+    }
+}
+
+.range-panel {
+    &__inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__input-container {
+        width: 129px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        background-color: $color-secondary-white-2;
+        border: none;
+        border-radius: 4px;
+
+        input {
+            width: 92px;
+            border: none;
+            background-color: #00000000;
+
+            @include typography($font-text, 14px, 500);
+            color: $color-primary-white;
+        }
+
+        span {
+            margin: 2px 0 0 0;
+            @include typography($font-text, 14px, 500);
+            color: $color-primary-white;
+        }
+    }
+
+    &__devider {
+        width: 16px;
+        height: 1px;
+
+        background-color: $color-secondary-white-2;
+        border-radius: 4px;
+    }
+}

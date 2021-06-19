@@ -1,0 +1,91 @@
+$font-title: "TenorSans", sans-serif;
+$font-text: "Inter", sans-serif;
+
+$width-max: 1393px;
+
+$color-primary-white: #ffffff;
+$color-primary-black: #151513;
+$color-primary-orange: #fc620f;
+$color-primary-jeans: #343c59;
+$color-primary-bronse: #b28672;
+
+$color-medium-gray: #5c5a55;
+
+$color-light-grey: #e3e0da;
+$color-light-jeans: #5d6993;
+
+$color-ultralight-grey: #f0f0f0;
+
+$color-secondary-white-1: #ffffffb3;
+$color-secondary-white-2: #ffffff33;
+
+$color-secondary-orange: #fc620f52;
+
+%btn-outline {
+    background-color: #ffffff00;
+
+    border: 2px solid $color-secondary-orange;
+
+    color: $color-primary-orange;
+
+    &:hover {
+        @extend %btn-fill;
+    }
+}
+
+%btn-fill {
+    background-color: $color-primary-orange;
+    color: $color-primary-white;
+
+    border: none;
+
+    &:hover {
+        @extend %btn-outline;
+    }
+}
+
+%btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border-radius: 48px;
+
+    transition: all 0.2s ease-in;
+
+    @include typography($font-text, 16px, 600);
+}
+
+%btn-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border-radius: 32px;
+    @include typography($font-text, 14px, 600);
+
+    transition: all 0.2s ease-in;
+}
+
+%checkbox-label {
+    background-color: $color-primary-jeans;
+    border: 2px solid $color-secondary-white-2;
+
+    transition: all 0.2s ease-in;
+
+    p {
+        color: $color-primary-white;
+
+        transition: all 0.2s ease-in;
+    }
+}
+
+%checkbox-label-active {
+    background-color: $color-primary-white;
+
+    p {
+        color: $color-primary-jeans;
+    }
+}

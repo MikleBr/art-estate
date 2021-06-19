@@ -1,0 +1,30 @@
+@import "./core/core";
+
+@import "./components/header.scss";
+
+@import "./components/chat.scss";
+
+.catalog-page {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: $width-max;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@import "./components/sidebar.scss";
+
+@import "./components/rangeSlider.scss";
+
+@import "./components/catalog.scss";
+
+@import "./components/swiper.scss";
+
+@import "./components/footer.scss";

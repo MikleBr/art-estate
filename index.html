@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ion range slider default css -->
+    <link rel="stylesheet" href="./css/ion.rangeSlider.min.css">
+    <!-- swiper default css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Art Estate</title>
+</head>
+
+<body>
+
+    <!-- header-->
+
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="#"><img src="./img/Header__logo.svg" alt="Art Estate"></a>
+                </div>
+                <nav class="header__nav-bar nav-bar">
+                    <div class="nav-bar__links">
+                        <a href="#" class="nav-bar__link">Главная</a>
+                        <a href="#" class="nav-bar__link">Каталог недвижимости</a>
+                        <a href="#" class="nav-bar__link">Блог</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="header__right">
+                <div class="header__phone"><a href="tel:+7 (812) 501-1000">+7 (812) 501-1000</a></div>
+                <div class="header__social social-links">
+                    <a href="#" class="social-links__link"><img src="./img/icons/telegram-icon.svg" alt="telegram"></a>
+                    <a href="#" class="social-links__link"><img src="./img/icons/whatsapp-icon.svg" alt="whatsapp"></a>
+                </div>
+                <button class="header__btn">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="chat-icon">
+        <div class="chat-icon__outline">
+        </div>
+        <div class="chat-icon__bg">
+        </div>
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M22.75 3.79175H5.25C4.55381 3.79175 3.88613 4.06831 3.39384 4.56059C2.90156 5.05288 2.625 5.72055 2.625 6.41675V18.0834C2.625 18.7796 2.90156 19.4473 3.39384 19.9396C3.88613 20.4319 4.55381 20.7084 5.25 20.7084H8.45833V26.6117L14.3617 20.7084H22.75C23.4462 20.7084 24.1139 20.4319 24.6062 19.9396C25.0984 19.4473 25.375 18.7796 25.375 18.0834V6.41675C25.375 5.72055 25.0984 5.05288 24.6062 4.56059C24.1139 4.06831 23.4462 3.79175 22.75 3.79175ZM23.625 18.0834C23.622 18.3145 23.5288 18.5353 23.3654 18.6988C23.2019 18.8622 22.9811 18.9554 22.75 18.9584H13.6383L10.2083 22.3884V18.9584H5.25C5.01888 18.9554 4.79807 18.8622 4.63462 18.6988C4.47118 18.5353 4.37802 18.3145 4.375 18.0834V6.41675C4.37802 6.18562 4.47118 5.96481 4.63462 5.80137C4.79807 5.63793 5.01888 5.54477 5.25 5.54175H22.75C22.9811 5.54477 23.2019 5.63793 23.3654 5.80137C23.5288 5.96481 23.622 6.18562 23.625 6.41675V18.0834Z"
+                fill="white" />
+            <path d="M19.8333 9.33341H8.16667V11.0834H19.8333V9.33341Z" fill="white" />
+            <path d="M16.3333 13.4167H8.16667V15.1667H16.3333V13.4167Z" fill="white" />
+        </svg>
+    </div>
+
+    <div class="page-title">
+        <div class="page-title__text">
+            <h1>Каталог квартир в Хамовниках</h1>
+        </div>
+    </div>
+
+    <!-- header end -->
+
+    <main class="catalog-page">
+        <div class="catalog-page__container container">
+
+            <!-- Правая панель фильтров -->
+
+            <div class="filter-panel">
+                <!-- Параметры отображения  -->
+                <div class="filter-panel__view-params view-params">
+                    <div class="view-params__title filter-panel__title">
+                        <p>Отображение</p>
+                    </div>
+                    <div class="view-params__btns-block">
+                        <input class="view-params__radio" type="radio" name="view-params" id="view-params-1" checked>
+                        <label class="view-params__label" for="view-params-1">
+                            <div class="view-params__label-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 6.25H7V7.75H21V6.25Z" fill="#343C59" />
+                                    <path d="M21 11.25H7V12.75H21V11.25Z" fill="#343C59" />
+                                    <path d="M21 16.25H7V17.75H21V16.25Z" fill="#343C59" />
+                                    <path d="M5 6.25H3V7.75H5V6.25Z" fill="#343C59" />
+                                    <path d="M5 11.25H3V12.75H5V11.25Z" fill="#343C59" />
+                                    <path d="M5 16.25H3V17.75H5V16.25Z" fill="#343C59" />
+                                </svg>
+                            </div>
+                            <p>Список</p>
+                        </label>
+                        <input class="view-params__radio" type="radio" name="view-params" id="view-params-2">
+                        <label class="view-params__label" for="view-params-2">
+                            <div class="view-params__label-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15 6.35993L9 4.19993L2.25 6.62993V20.0699L9 17.6399L15 19.7999L21.75 17.3699V3.92993L15 6.35993ZM9.75 6.06993L14.25 7.67993V17.9299L9.75 16.3199V6.06993ZM3.75 7.67993L8.25 6.06993V16.3199L3.75 17.9299V7.67993ZM20.25 16.3199L15.75 17.9299V7.67993L20.25 6.06993V16.3199Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <p>Карта</p>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- разделительная полоса -->
+                <div class="filter-panel__divider"></div>
+
+                <!-- Фильтр цены: валюта и границы -->
+                <div class="filter-panel__price-params price-params">
+                    <div class="price-params__title filter-panel__title">
+                        <p>Цена</p>
+                    </div>
+                    <div class="price-params__btns-block">
+                        <input class="price-params__radio" type="radio" name="price-params" id="price-params-1" checked>
+                        <label class="price-params__label" for="price-params-1">
+                            <p>&#8381;</p>
+                        </label>
+                        <input class="price-params__radio" type="radio" name="price-params" id="price-params-2">
+                        <label class="price-params__label" for="price-params-2">
+                            <p>&#36;</p>
+                        </label>
+                        <input class="price-params__radio" type="radio" name="price-params" id="price-params-3">
+                        <label class="price-params__label" for="price-params-3">
+                            <p>&#8364;</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-panel__price-params range-panel">
+                    <input type="text" class="range-panel__slider" id="price-slider" />
+                    <div class="range-panel__inputs">
+                        <div class="range-panel__input-container">
+                            <input value="10 000 000" min-val="10000000" disabled id="price-input-1">
+                            <span>&#36;</span>
+                        </div>
+
+                        <div class="range-panel__devider"></div>
+                        <div class="range-panel__input-container">
+                            <input type="text" value="200 000 000" max-val="200000000" disabled id="price-input-2">
+                            <span>&#36;</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="filter-panel__divider"></div>
+
+                <div class="filter-panel__squere-params range-panel">
+                    <div class="squere-params__title filter-panel__title">
+                        <p>Площадь</p>
+                    </div>
+                    <input type="text" class="range-panel__slider" id="squere-slider" />
+                    <div class="range-panel__inputs">
+                        <div class="range-panel__input-container">
+                            <input type="text" value="20" min-val="20" disabled id="squere-input-1">
+                            <span>м&#178;</span>
+                        </div>
+
+                        <div class="range-panel__devider"></div>
+
+                        <div class="range-panel__input-container">
+                            <input type="text" value="800" max-val="800" disabled id="squere-input-2">
+                            <span>м&#178;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-panel__divider"></div>
+
+
+                <div class="filter-panel__rooms-params range-panel">
+                    <div class="rooms-params__title filter-panel__title">
+                        <p>Площадь</p>
+                    </div>
+                    <input type="text" class="range-panel__slider" id="rooms-slider" />
+                    <div class="range-panel__inputs">
+                        <div class="range-panel__input-container">
+                            <input type="text" value="1" min-val="1" disabled id="rooms-input-1">
+                        </div>
+
+                        <div class="range-panel__devider"></div>
+
+                        <div class="range-panel__input-container">
+                            <input type="text" value="15" max-val="15" disabled id="rooms-input-2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- разделительная полоса -->
+                <div class="filter-panel__divider"></div>
+
+                <div class="filter-panel__complexes checkbox-params">
+                    <div class="checkbox-params__title filter-panel__title">
+                        <p>Жилые комплексы</p>
+                    </div>
+                    <div class="checkbox-params__btns-block">
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-1">
+                            <label class="checkbox-params__label" for="complexes-checkbox-1">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Пироговская, 14</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>53</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-2">
+                            <label class="checkbox-params__label" for="complexes-checkbox-2">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Барыковские палаты</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>11</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-3">
+                            <label class="checkbox-params__label" for="complexes-checkbox-3">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Европкинский, 16</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>2</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-4">
+                            <label class="checkbox-params__label" for="complexes-checkbox-4">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Коробейников, 18</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-5">
+                            <label class="checkbox-params__label" for="complexes-checkbox-5">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Пироговская, 14</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>53</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-6">
+                            <label class="checkbox-params__label" for="complexes-checkbox-6">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Crystal House</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>12</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="complexes-checkbox"
+                                id="complexes-checkbox-7">
+                            <label class="checkbox-params__label" for="complexes-checkbox-7">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Light House </p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-params__more">
+                        <a href="#">Показать ещё</a>
+                    </div>
+                </div>
+
+                <!-- разделительная полоса -->
+                <div class="filter-panel__divider"></div>
+
+                <div class="filter-panel__inside checkbox-params">
+                    <div class="checkbox-params__title filter-panel__title">
+                        <p>Внутреннаяя отделка</p>
+                    </div>
+                    <div class="checkbox-params__btns-block">
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="inside-checkbox"
+                                id="inside-checkbox-1">
+                            <label class="checkbox-params__label" for="inside-checkbox-1">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Whitebox</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="inside-checkbox"
+                                id="inside-checkbox-2">
+                            <label class="checkbox-params__label" for="inside-checkbox-2">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">С отделкой</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>351</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="inside-checkbox"
+                                id="inside-checkbox-3">
+                            <label class="checkbox-params__label" for="inside-checkbox-3">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Без отделки</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>175</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- разделительная полоса -->
+                <div class="filter-panel__divider"></div>
+
+                <div class="filter-panel__metro checkbox-params">
+                    <div class="checkbox-params__title filter-panel__title">
+                        <p>Близость к метро</p>
+                    </div>
+                    <div class="checkbox-params__btns-block">
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-1">
+                            <label class="checkbox-params__label" for="metro-checkbox-1">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+                                </div>
+                                <p>Аэропорт</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>35</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-2">
+                            <label class="checkbox-params__label" for="metro-checkbox-2">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="#ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Авиамоторная</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-3">
+                            <label class="checkbox-params__label" for="metro-checkbox-3">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Домодедовская</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-4">
+                            <label class="checkbox-params__label" for="metro-checkbox-4">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Таганская</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>8</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-5">
+                            <label class="checkbox-params__label" for="metro-checkbox-5">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Маяковская</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>12</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-6">
+                            <label class="checkbox-params__label" for="metro-checkbox-6">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Чкаловская</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-params__element">
+                            <input class="checkbox-params__checkbox" type="checkbox" name="metro-checkbox"
+                                id="metro-checkbox-7">
+                            <label class="checkbox-params__label" for="metro-checkbox-7">
+                                <div class="checkbox-params__icon">
+                                    <div class="checkbox-params__icon-border"></div>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.5 0.25H2.5C1.90326 0.25 1.33097 0.487053 0.90901 0.90901C0.487053 1.33097 0.25 1.90326 0.25 2.5V15.5C0.25 16.0967 0.487053 16.669 0.90901 17.091C1.33097 17.5129 1.90326 17.75 2.5 17.75H15.5C16.0967 17.75 16.669 17.5129 17.091 17.091C17.5129 16.669 17.75 16.0967 17.75 15.5V2.5C17.75 1.90326 17.5129 1.33097 17.091 0.90901C16.669 0.487053 16.0967 0.25 15.5 0.25ZM7.29 13.92L2.47 9.1L3.53 8L7.29 11.76L14.47 4.57L15.53 5.63L7.29 13.92Z"
+                                            fill="ffffff00" />
+                                    </svg>
+
+                                </div>
+                                <p class="checkbox-params__text">Динамо</p>
+                            </label>
+                            <div class="checkbox-params__count">
+                                <p>9</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-params__more">
+                        <a href="#">Показать ещё</a>
+                    </div>
+                </div>
+
+                <div class="filter-panel__divider"></div>
+
+                <div class="filter-panel__reset-btn">
+                    <button>Сбросить фильтры</button>
+                </div>
+            </div>
+
+            <div class="catalog">
+
+                <!-- Кнопки вкладок -->
+                <div class="catalog__tab-panel">
+                    <input class="catalog__tab-radio" type="radio" name="tab-radio" id="tab-radio-1" checked>
+                    <label class="catalog__tab-label" for="tab-radio-1">
+                        <p>Квартиры</p>
+                    </label>
+                    <input class="catalog__tab-radio" type="radio" name="tab-radio" id="tab-radio-2">
+                    <label class="catalog__tab-label" for="tab-radio-2">
+                        <p>Комплексы</p>
+                    </label>
+                </div>
+
+                <!-- Поиск и сортировка -->
+                <div class="catalog__params-panel">
+                    <div class="catalog__search-bar search-bar">
+                        <img class="search-bar__icon" src="./img/icons/search-icon.svg" alt="">
+                        <input class="search-bar__input" type="text" placeholder="Комплекс, улица, район или метро">
+                    </div>
+                    <div class="catalog__sort-select select">
+                        <div class="select__header">
+                            <div class="select__current">
+                                <p class="select__item-text">По алфавиту</p>
+                                <p class="select__item-sub-text">А ― Я</p>
+                            </div>
+                            <div class="select__icon"><img src="./img/icons/select-arrow-icon.svg" alt="arrow down">
+                            </div>
+                        </div>
+
+                        <div class="select__body">
+                            <div class="select__item select-item_empty">
+                            </div>
+                            <div class="select__item select__item_selected">
+                                <p class="select__item-text">По алфавиту</p>
+                                <p class="select__item-sub-text">А ― Я</p>
+                            </div>
+                            <div class="select__item">
+                                <p class="select__item-text">По алфавиту</p>
+                                <p class="select__item-sub-text">Я ― А</p>
+                            </div>
+                            <div class="select__item">
+                                <p class="select__item-text">По цене</p>
+                                <p class="select__item-sub-text">Сначала дорогие</p>
+                            </div>
+                            <div class="select__item">
+                                <p class="select__item-text">По цене</p>
+                                <p class="select__item-sub-text">Сначала дешевые</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Список квартир -->
+
+                <div class="catalog__list">
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img.jpg"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-1.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-3.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__product-card product-card">
+                        <div class="product-card__carousel product-carousel swiper-container">
+                            <div class='product-carousel__wrapper swiper-wrapper'>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                                <div class="product-carousel__slide swiper-slide"><img src="./img/card-img-4.png"
+                                        alt="card-img"></div>
+                            </div>
+
+                            <div class="product-carousel__pagination swiper-pagination"></div>
+
+                            <div class="swiper-button-next"><img src="./img/icons/carousel-arr-r.svg" alt="right arr">
+                            </div>
+                            <div class="swiper-button-prev"><img src="./img/icons/carousel-arr-l.svg" alt="left arr">
+                            </div>
+                        </div>
+
+                        <div class="product-card__content">
+                            <div class="product-card__title">
+                                <h3>Студия</h3>
+                            </div>
+                            <div class="product-card__location">
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/location-icon.svg" alt="">
+                                    <p>RozaRossa</p>
+                                </div>
+                                <div class="product-card__location-name">
+                                    <img class="product-card__location-icon" src="./img/icons/metro-icon.svg" alt="">
+                                    <p>Парк Культуры</p>
+                                </div>
+
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__square">
+                                    <p><span class="product-card__param-name">Площадь:</span></p>
+                                    <p>33 м&#178;</p>
+                                </div>
+                                <div class="product-card__floor">
+                                    <p><span class="product-card__param-name">Этаж:</span></p>
+                                    <p>4</p>
+                                </div>
+                                <div class="product-card__bedrooms">
+                                    <p><span class="product-card__param-name">Спальни:</span></p>
+                                    <p>0</p>
+                                </div>
+                            </div>
+
+                            <div class="product-card__divider"></div>
+
+                            <div class="product-card__price">
+                                <p>29 190 000 &#8381;</p>
+                            </div>
+                            <div class="product-card__second-price">
+                                <p>885 000 ₽ / м&#178;</p>
+                            </div>
+                            <div class="product-card__btns-block">
+                                <button class="product-card__contact-btn">Назначить просмотр</button>
+                                <button class="product-card__details-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__like-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 21.06L4.08003 13.14C3.04436 12.1043 2.46252 10.6997 2.46252 9.235C2.46252 7.77034 3.04436 6.36567 4.08003 5.33C5.1157 4.29433 6.52037 3.71249 7.98503 3.71249C9.44969 3.71249 10.8544 4.29433 11.89 5.33L12 5.45L12.11 5.33C13.1457 4.29433 14.5504 3.71249 16.015 3.71249C17.4797 3.71249 18.8844 4.29433 19.92 5.33C20.9557 6.36567 21.5375 7.77034 21.5375 9.235C21.5375 10.6997 20.9557 12.1043 19.92 13.14L12 21.06ZM8.00003 5.22C7.20137 5.21126 6.41838 5.44182 5.75191 5.88198C5.08543 6.32215 4.56599 6.95175 4.26048 7.68972C3.95496 8.42768 3.87737 9.24021 4.03769 10.0227C4.19801 10.8051 4.58891 11.5217 5.16003 12.08L12 18.94L18.86 12.08C19.6146 11.3255 20.0385 10.3021 20.0385 9.235C20.0385 8.16792 19.6146 7.14454 18.86 6.39C18.1055 5.63546 17.0821 5.21156 16.015 5.21156C14.9479 5.21156 13.9246 5.63546 13.17 6.39L12 7.57L10.83 6.39C10.4583 6.01866 10.017 5.7242 9.53143 5.52345C9.04585 5.3227 8.52547 5.21958 8.00003 5.22Z"
+                                    fill="#5C5A55" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="catalog__more-btn">
+                        <div class="catalog__more-btn-line"></div>
+                        <button>Показать ещё</button>
+                        <div class="catalog__more-btn-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__header">
+                <div class="footer__right">
+                    <div class="footer__logo">
+                        <a class="nav-bar__link" href="#"><img src="./img/Header__logo.svg" alt="logo"></a>
+
+                    </div>
+                    <nav class="footer__nav-bar nav-bar">
+                        <div class="nav-bar__links">
+                            <a href="#" class="nav-bar__link">Главная</a>
+                            <a href="#" class="nav-bar__link">Каталог недвижимости</a>
+                            <a href="#" class="nav-bar__link">Блог</a>
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="footer__left">
+                    <div class="footer__social social-links">
+                        <a href="#" class="social-links__link"><img src="./img/icons/telegram-icon.svg"
+                                alt="telegram"></a>
+                        <a href="#" class="social-links__link"><img src="./img/icons/whatsapp-icon.svg"
+                                alt="whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__links links">
+                <div class="links__right">
+                    <div class="links__title">
+                        <h3>Комплексы</h3>
+                    </div>
+                    <div class="links__list">
+                        <ul class="links__colum">
+                            <a href="#">RozaRossa</a>
+                            <a href="#">Barrin House</a>
+                            <a href="#">Allegoria mosca</a>
+                            <a href="#">Knightsbridge Private park</a>
+                            <a href="#">Остоженка Парк палас</a>
+                            <a href="#">Fusion Park</a>
+                            <a href="#">Новая Остоженка</a>
+                            <a href="#">Magnum</a>
+                        </ul>
+                        <ul class="links__colum">
+                            <a href="#">Садовые Кварталы</a>
+                            <a href="#">Андреевский дом</a>
+                            <a href="#">Crystal House</a>
+                            <a href="#">White</a>
+                            <a href="#">Carre Blanc</a>
+                            <a href="#">Литератор</a>
+                            <a href="#">Барыковские палаты</a>
+                            <a href="#">Magnum</a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="links__left">
+                    <div class="links__title">
+                        <h3>Подборки</h3>
+                    </div>
+                    <div class="links__list">
+                        <div class="links__colum">
+                            <a href="#">Без отделки</a>
+                            <a href="#">В Хамовниках</a>
+                            <a href="#">Воробъевы горы</a>
+                            <a href="#">Комсомольский проспект</a>
+                            <a href="#">Кропоткинская</a>
+                            <a href="#">Лужники</a>
+                            <a href="#">На Остоженке</a>
+                            <a href="#">На плющихе</a>
+                        </div>
+                        <div class="links__colum">
+                            <a href="#">С каминами</a>
+                            <a href="#">С мебелью</a>
+                            <a href="#">С отделкой</a>
+                            <a href="#">С терассой</a>
+                            <a href="#">Спортивная</a>
+                            <a href="#">Фрунзенская</a>
+                            <a href="#">Уникальные</a>
+                            <a href="#">Элитные</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery 3.4.1 -->
+    <script src="./js/libs/jquery.min.js"></script>
+    <!-- iou.rangeSlider -->
+    <script src="./js/libs/ion.rangeSlider.min.js"></script>
+
+    <!-- swiper -->
+
+    <script src="./js/libs/swiper-bundle.min.js"></script>
+
+    <!-- my script for range slider -->
+    <script src="./js/range.js"></script>
+
+    <script src="./js/carousel.js"></script>
+
+    <script src="./js/select.js"></script>
+</body>
+
+</html>
